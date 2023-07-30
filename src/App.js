@@ -8,14 +8,11 @@ import Notification from './components/notification'
 import {showNotification as show} from './helpers/helper'
 // if you have to name things the same this is a way around it
 import './App.css'
-import axios from 'axios';
 
-// const words = ['application', 'wizard', 'programming', 'interface'];
-const words = () => {
-  axios.get(`https://random-word-api.vercel.app/api?words=1`)
-}
-// let selectedWord = words[Math.floor(Math.random() * words.length)];
-let selectedWord = words;
+const words = ['application', 'wizard', 'programming', 'interface'];
+
+let selectedWord = words[Math.floor(Math.random() * words.length)];
+// let selectedWord = words;
 function App() {
   // constants used need to be declared in the app itself. 
   const [playable, setPlayable] = useState(true);
